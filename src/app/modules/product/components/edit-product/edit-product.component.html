@@ -1,0 +1,48 @@
+<button [routerLink]="['']" style="width: 145px;font-size: 16px; font-weight: 500; background-color: white; border: 1px; border-radius: 5px; height: 35px; padding: 8px;">
+   <div style="display: flex;"> 
+    <p style="color: rgb(90, 90, 90)"><i class="fa-solid fa-arrow-left" style="margin-right:10px;"></i> Voltar para lista</p>
+   </div>
+</button>
+
+<div class="card-edit">
+    <div style="display: flex;">
+        <h1 style="width: 90%; font-weight: 700;" *ngIf="isNewProduct">Adicionar novo produto</h1>
+        <h1 style="width: 90%; font-weight: 700;" *ngIf="!isNewProduct">Editar produto</h1>
+        <button *ngIf="isNewProduct" (click)="saveProduct()" [ngClass]="{'button-disabled': formProduct.invalid}" [disabled]="formProduct.invalid" style="height: 35px; width: 10%; border: 1px; 
+        border-radius: 5px; color: white; background-color: #4f993c; word-spacing: 5px; font-weight: 500;">Cadastrar</button>
+        <button *ngIf="!isNewProduct" (click)="updateProduct()" [ngClass]="{'button-disabled': formProduct.invalid}" [disabled]="formProduct.invalid" style="height: 35px; width: 10%; border: 1px; 
+        border-radius: 5px; color: white; background-color: #4f993c; word-spacing: 5px; font-weight: 500;">Salvar</button>
+        <button *ngIf="!isNewProduct" (click)="removeProduct()" style="height: 35px; width: 10%; border: 1px; margin-left: 10px; 
+        border-radius: 5px; color: white; background-color: #f50000; word-spacing: 5px; font-weight: 500;">Remover</button>
+    </div>
+    <hr>
+    <div class="card-flex">
+    <div style="width: 50%; display: block; padding: 10px 20px 10px 10px;" >
+        <h2>Informações do produto</h2>
+        <div>
+            <mat-slide-toggle [formControl]="$any(formProduct).controls['status']" [checked]="true"><p class="title">Visível</p></mat-slide-toggle>
+        </div>
+        <div style="margin-top: 20px;">
+            <app-input [width]="'100%'" [placeholder]="'Nome do produto'" [keyFormControl]="$any(formProduct).controls['name']"></app-input>
+        </div>
+        <div style="display: flex; margin-top: 20px;">
+            <div style="width: 50%; margin-right: 5px;">
+                <app-input-number [width]="'100%'" [placeholder]="'Estoque'" [keyFormControl]="$any(formProduct).controls['stock']"></app-input-number>
+            </div>
+            <div style="width: 50%; margin-left: 5px;">
+                <app-input-currency [width]="'100%'" [placeholder]="'Preço'" [keyFormControl]="$any(formProduct).controls['price']"></app-input-currency>
+            </div>
+        </div>
+    </div>
+    <div class = "vertical"></div>
+    <div style="width: 50%; margin-left: 20px;">
+        <h2>Detalhes do produto</h2>
+        <div >
+            <app-input [width]="'100%'" [placeholder]="'Descrição'" [keyFormControl]="$any(formProduct).controls['description']"></app-input>
+        </div >
+        <div style="margin-top: 20px;">
+            <app-input [width]="'100%'" [placeholder]="'Link Imagem'" [keyFormControl]="$any(formProduct).controls['image']"></app-input>
+        </div>
+    </div>
+    </div>
+</div>

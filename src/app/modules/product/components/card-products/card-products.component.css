@@ -1,0 +1,19 @@
+p {
+    color: black;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+i {
+    font-size: 18px;
+    color: black;
+}
+
+button {
+    background-color: transparent;
+    border: 0px
+}
+
+.product-name {
+font-weight: 600;
+}

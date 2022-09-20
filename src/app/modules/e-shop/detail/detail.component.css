@@ -1,0 +1,15 @@
+.product-detail {
+    height: 500px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.vertical {
+    border-left: 0.5px solid rgb(209, 209, 209);
+    height: 460px;
+    left: 50%;
+}

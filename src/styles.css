@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; background-color: #e3e3e3;}
+
+body { 
+    margin: 0; 
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif !important;
+}
+
+h1 {
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif !important;
+}
+
+h2 {
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif !important;
+}
+
+h3 {
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif !important;
+}
+
+.input-invalid {
+    border-color: red;
+    color: red;
+    box-shadow: 0 0 0 0.7px red;
+}
+
+.input-invalid-placeholder {
+    color: red !important;
+}
+
+.button-disabled {
+    background-color: rgb(180, 180, 180) !important;
+}

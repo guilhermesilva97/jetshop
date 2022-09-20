@@ -1,0 +1,9 @@
+<div>
+    <p [ngClass]="{'input-invalid-placeholder': keyFormControl && keyFormControl.invalid}">{{placeholder}}</p>
+    <input [ngClass]="{'input-invalid': keyFormControl && keyFormControl.invalid}" matInput currencyMask [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" 
+    [type]="'type'" autocomplete="off" [ngStyle]="{'width': width}" [formControl]="keyFormControl"/>
+
+    <mat-error *ngIf="keyFormControl && keyFormControl.hasError('required')">
+        Campo é requerido
+      </mat-error>
+</div>

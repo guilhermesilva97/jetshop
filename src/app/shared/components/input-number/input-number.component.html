@@ -1,0 +1,9 @@
+<div>
+    <p [ngClass]="{'input-invalid-placeholder': keyFormControl && keyFormControl.invalid}">{{placeholder}}</p>
+    <input [ngClass]="{'input-invalid': keyFormControl && keyFormControl.invalid}" [type]="'number'" [min]="min" [step]="step" autocomplete="off" 
+    [ngStyle]="{'width': width}" [formControl]="keyFormControl"/>
+
+    <mat-error *ngIf="keyFormControl && keyFormControl.hasError('required')">
+        Campo é requerido
+      </mat-error>
+</div>

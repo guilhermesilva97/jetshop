@@ -1,0 +1,9 @@
+<div class="div-main">
+    <div *ngFor="let product of products">
+        <app-card [product]="product"></app-card>
+    </div>
+</div>
+
+<div *ngIf="products.length === 0" style="text-align: center; margin-top:50px; background-color:white; border-radius: 15px;">
+    <h2>Nenhum produto encontrado.</h2>
+</div>

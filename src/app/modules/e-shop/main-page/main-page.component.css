@@ -1,0 +1,9 @@
+.div-main {
+    width: 100%;
+    float: left;
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px;
+    margin-bottom: 50px;
+}

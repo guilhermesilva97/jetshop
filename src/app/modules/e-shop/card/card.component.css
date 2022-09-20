@@ -1,0 +1,14 @@
+.card-product {
+    width: 240px;
+    height: 400px;
+    background-color: white;
+    border-radius: 7px;
+    margin: 15px;
+    float: left;
+    display: inline;
+}
+
+p {
+    margin:0px;
+    word-wrap:break-word;
+}

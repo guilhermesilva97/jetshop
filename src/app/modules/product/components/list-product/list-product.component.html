@@ -1,0 +1,18 @@
+<form [formGroup]="searchFilterForm">
+    <div class="div-search">
+      <app-input-search [keyFormControl]="$any(searchFilterForm).controls['labelSearch']"></app-input-search>
+    </div>
+  </form>
+  
+  <div class="div-list">
+      <h2>Listagem de produtos</h2>
+    <div style="width: 100%; margin-top: 40px;">
+      <app-table-products [dataSource]="productsFilter"></app-table-products>
+    </div>
+  </div>
+  
+  <div style="width: 100%; justify-content:end; display: flex">
+    <button [routerLink]="['/edit-product']" style="border-radius: 5px; margin-top: 20px; right: 0; border:0px; 
+      padding: 10px; color:white; background-color: #302b58; word-spacing: 5px; font-weight: 500;">
+      Cadastrar Novo Produto</button>
+  </div>
